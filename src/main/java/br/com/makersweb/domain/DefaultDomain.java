@@ -30,7 +30,7 @@ public class DefaultDomain implements Serializable {
 
 	@JsonInclude(Include.NON_NULL)
 	@Column(name = "criado", columnDefinition = "DATETIME", nullable = false, updatable = false)
-	private LocalDateTime created;
+	private LocalDateTime criado;
 
 	@JsonInclude(Include.NON_NULL)
 	@Column(name = "criado_por", nullable = false, updatable = false)
@@ -60,18 +60,18 @@ public class DefaultDomain implements Serializable {
 	}
 
 	/**
-	 * @return the created
+	 * @return the criado
 	 */
-	public LocalDateTime getCreated() {
-		return created;
+	public LocalDateTime getCriado() {
+		return criado;
 	}
 
 	/**
-	 * @param created
-	 *            the created to set
+	 * @param criado
+	 *            the criado to set
 	 */
-	public void setCreated(LocalDateTime created) {
-		this.created = created;
+	public void setCriado(LocalDateTime criado) {
+		this.criado = criado;
 	}
 
 	/**
