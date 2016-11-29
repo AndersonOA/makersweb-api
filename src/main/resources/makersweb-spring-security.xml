@@ -25,11 +25,11 @@
 			<password-encoder hash="sha-256" />
 			<jdbc-user-service data-source-ref="dataSource"
 				users-by-username-query="SELECT U.email AS login, U.senha AS password, U.enabled 
-				FROM tb_user U WHERE U.email = ? "
+				FROM mw_user U WHERE U.email = ? "
 				authorities-by-username-query="SELECT users.email AS login, role.role AS role FROM 
-                tb_user users,
-                tb_profile_role profile_role,
-                tb_role role WHERE 
+                mw_user users,
+                mw_profile_role profile_role,
+                mw_role role WHERE 
                 	users.profile_id = profile_role.profile_id AND
                 	profile_role.role_id = role.id AND     
                 	users.email = ? " />
